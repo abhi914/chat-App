@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "main": "index.js",
   "license": "MIT",
+  "engines": {
+    "node": "8.9.2"
+  },
   "dependencies": {
     "express": "4.16.3",
     "socket.io": "2.1.1"

@@ -4,6 +4,7 @@ const Path = require('path');
 const express = require('express');
 
 const publicPath = Path.join(__dirname,"..","public");
+const port = process.env.PORT || 3000
 
 const app = express();
 app.use(express.static(publicPath));
@@ -30,11 +31,7 @@ io.on('connection', (socket) => {
 });
 
 
-
-
-
-
-server.listen(3000, (err) => {
+server.listen(port, (err) => {
     if(err)
         console.log(err);
     console.log("Server Started at port 3000");
