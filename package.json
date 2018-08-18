@@ -4,13 +4,21 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "start": "node server/server.js"
-   },  
+    "start": "node server/server.js",
+    "test": "mocha server/**/*.test.js",
+    "test-watch": "nodemon --exec 'yarn test'"
+  },
   "engines": {
     "node": "8.9.2"
   },
   "dependencies": {
     "express": "4.16.3",
+    "moment": "2.22.2",
     "socket.io": "2.1.1"
+  },
+  "devDependencies": {
+    "expect": "23.5.0",
+    "mocha": "5.2.0",
+    "nodemon": "1.18.3"
   }
 }
